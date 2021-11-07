@@ -14,13 +14,13 @@ With this  extasion you can:
 * Select type of Series :
 
    * Line Series
-   ![LineSeries in LineChart](screenRecords/line.gif)
+   ![LineSeries in LineChart](screenRecords/line.png)
 
    * Point Line Series
-   ![pointLineSeries in LineChart](screenRecords/pointLine.gif)
+   ![pointLineSeries in LineChart](screenRecords/pointLine.png)
 
    * Point Series
-   ![pointSeries in LineChart](screenRecords/point.gif)
+   ![pointSeries in LineChart](screenRecords/point.png)
 
 
 * Customize color of Line Series 
