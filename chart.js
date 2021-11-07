@@ -67,6 +67,7 @@ define( [ "qlik", "./lib/lcjs.iife",],
                     ColorHEX,
                     SolidFill,
                     SolidLine,
+                    PointShape,
                     AutoCursorModes,
                     AxisTickStrategies,
                     translatePoint,
@@ -89,13 +90,59 @@ define( [ "qlik", "./lib/lcjs.iife",],
                     .setMouseInteractions(layout.XAnimation)
                     .setTitle(layout.xTitle)
 
-                const series = chart.addLineSeries({
-                    dataPattern: {
-                        // pattern: 'ProgressiveX' => Each consecutive data point has increased X coordinate.
-                        pattern: 'ProgressiveX',
-                    }
-                 })
-                series.setStrokeStyle(new SolidLine({ fillStyle: new SolidFill({ color: ColorHEX(layout.color.color) }), thickness: 2 }))
+                let series 
+
+                if(layout.chartType === 'LineSeries'){
+
+                    layout.showLineStyle = true
+                    layout.showPointSize = false
+                    
+                    series = chart.addLineSeries({
+                        dataPattern: {
+                            pattern: 'ProgressiveX',
+                        }
+                    })
+                    .setStrokeStyle(new SolidLine({ 
+                         fillStyle: new SolidFill({ color: ColorHEX(layout.color.color) }), 
+                         thickness: layout.lineThickness 
+                    }))
+
+                } else if (layout.chartType === 'PointLineSeries') {
+
+                    layout.showPoints = true
+                    layout.showLineSeries = true
+
+                    series = chart.addPointLineSeries({
+                        pointShape: PointShape.Circle,
+                        dataPattern: {
+                            pattern: 'ProgressiveX',
+                        }
+                    })
+                    .setStrokeStyle(new SolidLine({ 
+                        fillStyle: new SolidFill({ color: ColorHEX(layout.color.color) }), 
+                        thickness: layout.lineThickness 
+                    }))
+                    .setPointSize(layout.PointSize )
+                    .setPointFillStyle(new SolidFill({ color: ColorHEX(layout.pointColor.color)}));
+
+
+                } else {
+
+                    layout.showPoints = true
+                    layout.showLineSeries = false
+
+                    series = chart.addPointSeries({
+                         pointShape: PointShape.Triangle,
+                         dataPattern: {
+                            pattern: 'ProgressiveX',
+                        }
+                    })
+                    .setPointSize(layout.PointSize )
+                    .setPointFillStyle(new SolidFill({ color: ColorHEX(layout.pointColor.color) }));
+
+                }
+
+
                 _self.backendApi.eachDataRow(function (rownum, row) {      
                     series.add({
                         x: row[0].qNum,

@@ -5,11 +5,11 @@ define([], function () {
 			type: "items",
 			component: "accordion",
 			items: {
-            	dimensions: {
+        dimensions: {
 					uses: "dimensions",
 					min: 1,
 					max: 2
-            	},
+        },
 				measures: {
 					uses: "measures",
 					min: 1,
@@ -18,8 +18,9 @@ define([], function () {
 				settings: {
 					uses: "settings",
 					items: {
+
 						color: {
-							label:"Color",
+							label:"Series Color",
 							component: "color-picker",
 							ref: "color",
 							type: "object",
@@ -28,26 +29,103 @@ define([], function () {
 							  index: "-1"
 							}
 						},
+						pointColor: {
+							label:"Point Color",
+							component: "color-picker",
+							ref: "pointColor",
+							type: "object",
+							defaultValue: {
+							  color: "#fecc00",
+							  index: "-1"
+							},
+							// show: (layout) => (layout.showPoints)
+						},
 						amount: {
 							type: "integer",
 							label: "Amount of Points",
 							ref: "amount",
 							defaultValue: 500,
 							expression: "always"
-	
+						},
+
+						chartSettings: {
+							type: "items",
+							label: "Chart Settings",
+							ref: "ChartSettings",
+							items: {
+								chartType: {
+										type: "string",
+										component: "dropdown",
+										label: "Chart Type",
+										ref: "chartType",
+										options: [
+												{
+														value: "LineSeries",
+														label: "LineSeries"
+												}, 
+												{
+														value: "PointLineSeries",
+														label: "Point Line Series"
+												},
+												{
+														value: "Point Series",
+														label: "PointSeries"
+												}
+											],						
+										defaultValue: "LineSeries",
+								},
+								lineStyle: {
+									type: "number",
+									component: "slider",
+									label: "line thickness",
+									ref: "lineThickness",
+									min: 1,
+									max: 10,
+									step: 1,
+									defaultValue: 2,
+									// show: (layout) => (layout.showLineSeries)
+								},
+								pointStyle: {
+									type: "number",
+									component: "slider",
+									label: "Point size",
+									ref: "PointSize",
+									min: 1,
+									max: 10,
+									step: 1,
+									defaultValue: 2,
+									// show: (layout) => (layout.showPoints)
+								},
+
+								showLineSeries : {
+									type: "boolean",
+									ref: "showLineSeries",
+									defaultValue: true,
+									show: false
+								},
+								showPoints : {
+									type: "boolean",
+									ref: "showPoints",
+									defaultValue: true,
+									show: false
+								}
+							},
 						},
 						animation: {
 							type: "boolean",
 							component: "switch",
 							label: "Enable Animation",
 							ref: "animation",
-							options: [{
-								value: true,
-								label: "On"
-							}, {
-								value: false,
-								label: "Off"
-							}],
+							options: [
+								{
+									value: true,
+									label: "On"
+								}, 
+								{
+									value: false,
+									label: "Off"
+								}
+							],
 							defaultValue: true
 						},
 						chartTitle: {
@@ -68,20 +146,22 @@ define([], function () {
 									ref: "yTitle",
 									defaultValue: "",
 									expression: "always"
-	
 								},
 								yAnimation: {
 									type: "boolean",
 									component: "switch",
 									label: "Enable Animation",
 									ref: "yAnimation",
-									options: [{
-										value: true,
-										label: "On"
-									}, {
-										value: false,
-										label: "Off"
-									}],
+									options: [
+										{
+											value: true,
+											label: "On"
+										}, 
+										{
+											value: false,
+											label: "Off"
+										}
+									],
 									defaultValue: true
 								}
 							}
@@ -104,21 +184,21 @@ define([], function () {
 									component: "switch",
 									label: "Enable Animation",
 									ref: "xAnimation",
-									options: [{
-										value: true,
-										label: "On"
-									}, {
-										value: false,
-										label: "Off"
-									}],
+									options: [
+										{
+											value: true,
+											label: "On"
+										}, {
+											value: false,
+											label: "Off"
+										}
+									],
 									defaultValue: true
 								}
 							}
 						}
 					}
 				}
-			}
-
-        }
-    }
-)
+    	}
+ 	 }
+})
