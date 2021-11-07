@@ -1,6 +1,6 @@
 This Qlik extension was made by [lightningChart.js](https://www.arction.com/lightningchart-js/).
 
-LCJS one of the fastest JS charts in the world and can easily render [10 millions points](https://www.arction.com/javascript-charts-performance-comparison/) 
+LCJS one of the fastest JS charts in the world and can easily render **[10 millions points](https://www.arction.com/javascript-charts-performance-comparison/)**
 With our library you can create different types of charts, such as 3D, map, gauge, polar, XY and [even more](https://www.arction.com/lightningchart-js/)
 
 **LightningChart JS** is [700 times faster](https://www.arction.com/javascript-charts-performance-comparison/) than average competitor and 100 times faster than nearest competitors.
@@ -13,13 +13,18 @@ With this  extasion you can:
 
 * Select type of Series :
 
-   * Line Series
-   ![LineSeries in LineChart](screenRecords/line.png)
+   * **Line Series**
 
-   * Point Line Series
+   ![LineSeries in LineChart](screenRecords/line.png){ width=50% height=50% }
+
+
+   * **Point Line Series**
+
    ![pointLineSeries in LineChart](screenRecords/pointLine.png)
 
-   * Point Series
+
+   * **Point Series**
+
    ![pointSeries in LineChart](screenRecords/point.png)
 
 
@@ -33,10 +38,16 @@ With this  extasion you can:
 
 * Set the Title
 
+
+
+Here is an example of customizing thickness of lines, point size, and disabling the animation
+
 ![settings in LineChart](screenRecords/settings.gif)
 
 
+
 **This extension was tested with 1 million pooints**
+
 ![1m points in LineChart](screenRecords/1m.gif)
 
 
