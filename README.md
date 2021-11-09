@@ -9,7 +9,7 @@ This Qlik extension was made by [lightningChart.js](https://www.arction.com/ligh
 LightningChart JS is a **WebGL-based**, cross-platform charting library that has been developed for delivering the world’s highest performance.
 
 LCJS one of the fastest JS charts in the world. <br />
-It shows [700 times better performance](https://www.arction.com/wp-content/uploads/JavaScript%20charts%20performance%20comparison%20-%20line%20charts%20%28May%202021%29.pdf) than average competitor and 100 times faster than nearest competitors.
+It shows [700 times better performance](https://www.arction.com/wp-content/uploads/JavaScript%20charts%20performance%20comparison%20-%20line%20charts%20%28May%202021%29.pdf) on high-end desktop than average competitor and 100 times faster than nearest competitors.
  * Static line charts can visualize up to **[500 millions points](https://www.arction.com/javascript-charts-performance-comparison/)**
  * Real-time line charts can handle over **[10 million data points per second](https://www.arction.com/javascript-charts-performance-comparison/)**
 
@@ -69,12 +69,20 @@ Here is an example of customizing thickness of lines, point size, and disabling 
 
 <br />
 
+# Performance Comparison
+
+Here are results of comparison LCJS performance with one of competitor's extension.
+The graph shows time (in miliseconds) of loading chart with data. Smaller is better
+
+![1m points in LineChart](screenRecords/perf2.png)
+
+<br />
+
 # Installation
 
 **NOTE!**
 
-**[LightningChart](1) based on WebGl and will not render proprely on Sense Desktop.**
-You must use a browser (http://localhost:4848/hub) or Qlik Cloud 
+**Qlik Sense Desktop does not support WebGL**  and there is a significant performance hit. To get the maximum performance, use Qlik Cloud or a browser (http://localhost:4848/hub)
 
 
 To install extension, place folder with sected Extesion to C:\Users\<User Name>\Documents\Qlik\Sense\Extensions 
