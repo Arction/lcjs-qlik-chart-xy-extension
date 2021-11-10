@@ -82,7 +82,7 @@ To get the licence, please, visit this page https://www.arction.com/lightningcha
 **Qlik Sense Desktop does not support WebGL**  and there is a significant performance hit. To get the maximum performance, use Qlik Cloud or a browser (http://localhost:4848/hub)
 
 
-To install extension, place folder with sected Extesion to C:\Users\<User Name>\Documents\Qlik\Sense\Extensions 
+To install, place folder with selected Extension to C:\Users\<User Name>\Documents\Qlik\Sense\Extensions 
 or in QlikCloud ***/qlikcloud.com/console/extensions/ ->  'Add' and upload ZIP folder`
 
 To use extension in QlikCloud go to ****/qlikcloud.com/explore/spaces/all and press  'Add new'
