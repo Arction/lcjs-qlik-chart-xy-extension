@@ -69,9 +69,10 @@ define( [ "qlik", "./lib/lcjs.iife",],
                     Themes,
                 } = lcjs
     
+                const id = layout.qInfo.qId;
                 // Create a XY Chart.
                 const chart = lightningChart().ChartXY({
-                    container: 'lightningChart'
+                    container: 'lightningChart' + id
                 })
 
                 chart.setTitle(layout.chartTitle)

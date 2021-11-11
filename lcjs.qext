@@ -1,12 +1,12 @@
 {
-	"name": "lcjs",
-	"description": "Basic visualization chartXY 1m points",
+	"name": "LightningChart JS XY Chart",
+	"description": "High performance 2D line and point chart",
 	"type": "visualization",
 	"version": "1.0.0",
-	"icon": "extension",
+	"icon" : "line-chart",
 	"author": "Arction Ltd.",
 	"homepage": "https://www.arction.com",
-	"keywords": "qlik-sense, visualization, XY, qlik-cloud, chart, line-chart",
+	"keywords": "qlik-sense, visualization, XY, qlik-cloud, chart, line-chart, point-chart",
 	"license": "MIT",
 	"repository": "",
 	"dependencies": {

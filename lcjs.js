@@ -34,8 +34,10 @@ function ( qlik, definition, chart) {
 		// paint funcition that redner Qlik page
 		paint: function ($element, layout) {
 
+			const id = layout.qInfo.qId;
+
 			// add HTML container for LCJS
-			$element.html(`<div id="lightningChart" style="height:${height($element[0])}px"></div>`)
+			$element.html(`<div id="lightningChart${id}" style="height:${height($element[0])}px"></div>`)
 
 			// call buildChart fucntion to build the Chart 
 			chart.buildChart($element, layout, this).then(function() {
