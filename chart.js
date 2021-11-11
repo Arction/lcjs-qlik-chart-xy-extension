@@ -7,7 +7,6 @@ define( [ "qlik", "./lib/lcjs.iife",],
         buildChart: async function ($element, layout, _self) {
             
             try {
-                console.time("buildChartTestTIME");
                 let lastrow = {
                     row: 0
                 }
@@ -18,7 +17,6 @@ define( [ "qlik", "./lib/lcjs.iife",],
                 // iteration to add more data
                 await this.addMoreData(_self, lastrow, layout, columns);
                 this.createChart($element, layout, _self);
-                console.timeEnd("buildChartTestTIME");
             }
             catch (err) {
                 console.info(err);
@@ -33,7 +31,6 @@ define( [ "qlik", "./lib/lcjs.iife",],
 
         },
 
-        
         addMoreData: function(_self, lastrow, layout, colcount) {
 
             var _this = this;
@@ -72,12 +69,11 @@ define( [ "qlik", "./lib/lcjs.iife",],
                     Themes,
                 } = lcjs
     
-                console.time("Create a XY Chart.");
                 // Create a XY Chart.
                 const chart = lightningChart().ChartXY({
                     container: 'lightningChart'
                 })
-                console.timeEnd("Create a XY Chart.");
+
                 chart.setTitle(layout.chartTitle)
                     .setAnimationsEnabled(layout.animation)
 

@@ -7,7 +7,7 @@
 	"author": "Arction Ltd.",
 	"homepage": "",
 	"keywords": "qlik-sense, visualization, XY, qlik-cloud, chart, line-chart",
-	"license": "",
+	"license": "MIT",
 	"repository": "",
 	"dependencies": {
 		"qlik-sense": ">=3.0.x"

@@ -28,6 +28,7 @@ define([], function () {
 							  index: "-1"
 							}
 						},
+						
 						pointColor: {
 							label:"Point Color",
 							component: "color-picker",
@@ -39,6 +40,7 @@ define([], function () {
 							},
 							// show: (layout) => (layout.showPoints)
 						},
+
 						amount: {
 							type: "integer",
 							label: "Amount of Points",
@@ -110,6 +112,7 @@ define([], function () {
 								}
 							},
 						},
+
 						animation: {
 							type: "boolean",
 							component: "switch",
@@ -127,6 +130,7 @@ define([], function () {
 							],
 							defaultValue: true
 						},
+
 						chartTitle: {
 							type: "string",
 							label: "Chart Title",
@@ -134,6 +138,7 @@ define([], function () {
 							defaultValue: "",
 							expression: "always"
 						},
+
 						yAxisSettings: {
 							type: "items",
 							ref: "yAxisSettings",
@@ -165,6 +170,7 @@ define([], function () {
 								}
 							}
 						},
+
 						xAxisSettings: {
 							type: "items",
 							ref: "xAxisSettings",

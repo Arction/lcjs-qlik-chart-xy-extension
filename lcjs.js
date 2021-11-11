@@ -27,7 +27,6 @@ function ( qlik, definition, chart) {
 			exportData : false
 		},
 		controller: ['$scope', function ($scope) {
-			console.log($scope, 'LCJS');
 			$scope.selectedElements = new Map();
 
 		}],
@@ -37,13 +36,12 @@ function ( qlik, definition, chart) {
 
 			// add HTML container for LCJS
 			$element.html(`<div id="lightningChart" style="height:${height($element[0])}px"></div>`)
-		
-			console.time("chart.buildCharLCJJS");
+
 			// call buildChart fucntion to build the Chart 
 			chart.buildChart($element, layout, this).then(function() {
 				return qlik.Promise.resolve();
 			});
-			console.timeEn("chart.buildCharLCJJS");
+
 		},
 	};
 
