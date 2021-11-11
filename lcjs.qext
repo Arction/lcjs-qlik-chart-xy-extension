@@ -1,11 +1,11 @@
 {
 	"name": "lcjs",
-	"description": "Basic visualization chartXY",
+	"description": "Basic visualization chartXY 1m points",
 	"type": "visualization",
 	"version": "1.0.0",
 	"icon": "extension",
 	"author": "Arction Ltd.",
-	"homepage": "",
+	"homepage": "https://www.arction.com",
 	"keywords": "qlik-sense, visualization, XY, qlik-cloud, chart, line-chart",
 	"license": "MIT",
 	"repository": "",
