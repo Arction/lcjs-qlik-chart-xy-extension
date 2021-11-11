@@ -4,9 +4,9 @@
 	"type": "visualization",
 	"version": "1.0.0",
 	"icon": "extension",
-	"author": "",
+	"author": "Arction Ltd.",
 	"homepage": "",
-	"keywords": "qlik-sense, visualization",
+	"keywords": "qlik-sense, visualization, XY, qlik-cloud, chart, line-chart",
 	"license": "",
 	"repository": "",
 	"dependencies": {
