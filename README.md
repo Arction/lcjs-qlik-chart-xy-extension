@@ -1,8 +1,10 @@
 This Qlik extension was made by [lightningChart.js](https://www.arction.com/lightningchart-js/).
 
+# LightningChart JS Qlik XY Charts
+
 <br />
 
-# About Extension
+## About Extension
 
 <br />
 
@@ -52,7 +54,7 @@ Here is an example of customizing thickness of lines, point size, and disabling 
 
 <br />
 
-# About LightningChart.js
+## About LightningChart.js
 
 <br />
 
@@ -68,7 +70,7 @@ With our library, you can create different types of charts, such as XY, 3D, map,
 
 <br />
 
-# Installation and Usage
+## Installation and Usage
 
 <br />
 
@@ -83,7 +85,13 @@ To get the licence, please, visit this page https://www.arction.com/lightningcha
 
 
 To install, place folder with selected Extension to C:\Users\<User Name>\Documents\Qlik\Sense\Extensions 
-or in QlikCloud ***/qlikcloud.com/console/extensions/ ->  'Add' and upload ZIP folder`
+or in QlikCloud */qlikcloud.com/console/extensions/ ->  'Add' and upload **extension.zip** folder
 
 To use extension in QlikCloud go to ****/qlikcloud.com/explore/spaces/all and press  'Add new'
 
+<br />
+
+## Other extensions
+
+* [LightningChart JS Qlik 3D Chart](https://github.com/Arction/lcjs-qlik-chart-3d-extension)
+* [LightningChart JS XY Chart](https://github.com/Arction/lcjs-qlik-chart-xy-extension)

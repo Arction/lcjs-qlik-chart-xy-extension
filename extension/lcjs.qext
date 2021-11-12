@@ -4,7 +4,7 @@
 	"type": "visualization",
 	"version": "1.0.0",
 	"icon" : "line-chart",
-	"author": "Arction Ltd.",
+	"author": "Arction Ltd",
 	"homepage": "https://www.arction.com",
 	"keywords": "qlik-sense, visualization, XY, qlik-cloud, chart, line-chart, point-chart",
 	"license": "MIT",
